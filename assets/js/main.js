@@ -121,9 +121,9 @@ const App = {
           desc:
             "Welcome to EVIUM. Jump into a New World.",
           img:
-            "evium_a.png",
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/evium_a.png",
           thumbImg:
-            "E1.png"
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/E1.png"
         },
           {
           
@@ -131,63 +131,63 @@ const App = {
           desc:
             "ALPHA Energy is the primary energy of EVIUM. Alpha energy is absorbed from the soil and rocky minerals native to the EVIUM moon. EVIUM is rich in gold ore and has plentiful mountain ranges, each containing an abundance of gold veins. Alpha EVIUM are predominantly physically strong and dynamic creatures who traverse and graze the lush pasturelands on EVIUM. Alpha EVIUM are highly consistent hunter gatherers and can always provide for a clan. Explore Alpha in the left HUD menu.",
           img:
-            "alpha_a.png",
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/alpha_a.png",
           thumbImg:
-            "alpha_a.png"
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/alpha_a.png"
         },
         {
           name: "Beta",
           desc:
             "BETA Energy is the secondary energy of EVIUM. Beta Energy is provided by the water that flows through EVIUM. Beta energy flows through every EVIUM creature as they are all composed of mainly water. Beta energy flows from ancient oceans that originated in deep space before EVIUM was pulled into orbit in its new solar system. Beta EVIUM are hydrodynamic and have extraordinary health levels which is beneficial when creating a powerful EVIUM clan. Explore Beta in the left HUD menu.",
           img:
-            "beta_g.png",
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/beta_g.png",
           thumbImg:
-            "beta_g.png"
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/beta_g.png"
         },
         {
           name: "Gamma",
           desc:
             "GAMMA Energy is the atomic, fiery energy of EVIUM. Creatures formed from gamma energy can be temperamental and have powerful combative attributes. Gamma energy was supplied by the binary stars when they emitted powerful gamma ray bursts towards EVIUM. Gamma EVIUM are vibrant and radiate a fiery glow to warn other EVIUM of impending danger. Gamma EVIUM can be tamed, but still provide the greatest protection against external threats. Explore Gamma in the left HUD menu.",
           img:
-            "gamma_g.png",
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/beta_g.png",
           thumbImg:
-            "gamma_g.png"
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/beta_g.png"
         },
         {
           name: "Delta",
           desc:
             "DELTA Energy is the flora and fauna energy that is essential for life to exist on EVIUM. Delta energy EVIUM are mostly pollinators who maintain the ecosystem and pollinate the flowers. Delta energy EVIUM can pack a serious venomous attack, even when they may be small in stature. Delta EVIUM are highly efficient at working together in large numbers. A clan containing many Delta EVIUM can become the most streamlined and productive clan. Explore Delta in the left HUD menu.",
           img:
-            "delta_g.png",
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/delta_g.png",
           thumbImg:
-            "delta_g.png"
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/delta_g.png"
         },
         {
           name: "Phi",
           desc:
             "PHI Energy is the spiritual and psychedelic energy of EVIUM. Phi energy EVIUM possess the powerful ability to heal themselves with naturally occurring psychedelic isotopes. Legend tells that the Phi energy was transferred from the powerful gas giant above into a deep, global, neural network underground. Phi energy EVIUM are meditative and introverted creatures. Their bioluminescence reaches peak levels when they are in their ideal environment. Explore Phi in the left HUD menu.",
           img:
-            "phi_f.png",
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/phi_f.png",
           thumbImg:
-            "phi_f.png"
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/phi_f.png"
         },
         {
           name: "Psi",
           desc:
             "PSI Energy is the second spiritual and psychedelic energy of EVIUM. Psi Energy EVIUM possess the spiritual ability to revive other EVIUM with naturally occurring psychedelic chemicals. Legend is that EVIUM obtained the psychedelic chemicals from comet trails on its journey through deep space. Psi energy are calm and empathetic creatures who enjoy socializing with creatures from all energy types. Psi EVIUM perform at their best capacity when they are in the same vicinity of other Psi and Phi EVIUM. Explore Psi in the left HUD menu.",
           img:
-            "psi_g.png",
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/psi_g.png",
           thumbImg:
-            "psi_g.png"
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/psi_g.png"
         },
         {
           name: "Omega",
           desc:
             "OMEGA Energy is the final energy form of EVIUM. Omega energy EVIUM posses the ability to generate naturally occurring bio armour on their bodies, which equips them with a defensive advantage in combat and exploration. Omega EVIUM are explorers who are exceptional at finding resources in the wild. Omega EVIUM are staunch, dependent creatures who provide the ultimate support and reinforcement in a clan. Explore Omega in the left HUD menu.",
           img:
-            "omega_g.png",
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/omega_g.png",
           thumbImg:
-            "omega_g.png"
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/omega_g.png"
         }
       ]
     };
