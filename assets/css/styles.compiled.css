@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 6.25vmax;
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 10.0806451613vmax;
+  }
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: repeating-linear-gradient(110deg, #111 0%, #27235E 42%, #111 100%);
+  font-size: 0.18rem;
+  font-family: "Ovo", serif;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  align-items: center;
+  overflow: auto;
+  padding: 0.6rem;
+}
+@media (max-width: 992px) {
+  #app {
+    grid-template-columns: 100%;
+    row-gap: 1rem;
+  }
+}
+
+.hero-bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat top center/cover;
+  mask: linear-gradient(to right, transparent, #000 50%);
+  animation: fadeInFromRight 2.3s both;
+}
+
+.hero-title {
+  font-family: "Rowdies";
+  position: fixed;
+  padding-left: 4%;
+  padding-right: 4%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  color: white;
+  mix-blend-mode: overlay;
+  animation: blurFadeIn 1.2s both;
+}
+@media (max-width: 992px) {
+  .hero-title {
+    top: 2rem;
+    bottom: auto;
+  }
+}
+
+.round {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  flex-shrink: 0;
+}
+.round:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  border-radius: 50%;
+  border-top: 5px solid #fff;
+  animation: rotate 4.8s 0.19s both linear infinite;
+}
+.round .item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: roundItemFadeIn 0.8s 0.2s both;
+}
+.round .item.active .inner {
+  box-shadow: 0.05rem 0.05rem 0.2rem rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.round .item.active .inner:after {
+  width: 20%;
+  height: 20%;
+  opacity: 1;
+}
+.round .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.91rem;
+  height: 0.91rem;
+  border-radius: 50%;
+  box-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.round .inner:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.02;
+  transition: all 0.3s;
+}
+.round img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.hero-info {
+  font-family: "Rowdies";
+  width: 4rem;
+  padding: 0.2rem;
+  flex-shrink: 0;
+  position: relative;
+  padding-left: 4%;
+  padding-right: 4%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.15rem;
+  backdrop-filter: blur(4px);
+  background-color: #1F184A80;
+  box-shadow: 0 0 2rem rgba(255, 255, 244, 0.7);
+  text-shadow: 0 0 2px #555;
+}
+@media (max-width: 992px) {
+  .hero-info {
+    width: 100%;
+  }
+}
+.hero-info .row {
+  margin-bottom: 0.1rem;
+  animation: fadeInFromTop 0.5s both;
+}
+.hero-info .row:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.hero-info .row:nth-of-type(2) {
+  animation-delay: 0.25s;
+}
+.hero-info .row:nth-of-type(3) {
+  animation-delay: 0.5s;
+}
+.hero-info .row:nth-of-type(4) {
+  animation-delay: 0.75s;
+}
+.hero-info .title {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff00a;
+}
+.hero-info .title:before {
+  content: "";
+}
+.hero-info .content {
+  font-size: 2em;
+  line-height: 1.8;
+  color: #fff;
+}
+.hero-info .content.desc {
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+
+span {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border: 0px solid #fff 0;
+  border-width: 0.03rem 0.03rem 0 0;
+}
+span:nth-of-type(1) {
+  top: 0;
+  right: 0;
+}
+span:nth-of-type(2) {
+  bottom: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
+span:nth-of-type(3) {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+span:nth-of-type(4) {
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+@keyframes roundItemFadeIn {
+  from {
+    opacity: 0;
+    transform: none;
+  }
+}
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-0.2rem);
+  }
+}
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(0.5rem);
+  }
+}
+@keyframes blurFadeIn {
+  from {
+    filter: blur(10px);
+    letter-spacing: -0.4rem;
+  }
+}
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.btn8 {
+  display: inline-block;
+}
+.btn8:after {
+  display: inline-block;
+  color: #94a657;
+}
+.btn8.playing:after {
+  display: inline-block;
+  color: #94a657;
+}
+
+#alpha {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  align-items: center;
+  overflow: auto;
+  padding: 0.6rem;
+}
+@media (max-width: 992px) {
+  #alpha {
+    grid-template-columns: 100%;
+    row-gap: 1rem;
+  }
+}
+
+.hero-bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat top center/cover;
+  mask: linear-gradient(to right, transparent, #000 50%);
+  animation: fadeInFromRight 2.3s both;
+}
+
+.hero-title {
+  font-family: "Rowdies";
+  position: fixed;
+  padding-left: 4%;
+  padding-right: 4%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  color: white;
+  mix-blend-mode: overlay;
+  animation: blurFadeIn 1.2s both;
+}
+@media (max-width: 992px) {
+  .hero-title {
+    top: 2rem;
+    bottom: auto;
+  }
+}
+
+.round {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  flex-shrink: 0;
+}
+.round:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  border-radius: 50%;
+  border-top: 5px solid #fff;
+  animation: rotate 5s 0.2s both linear infinite;
+}
+.round .item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: roundItemFadeIn 0.8s 0.2s both;
+}
+.round .item.active .inner {
+  box-shadow: 0.05rem 0.05rem 0.2rem rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.round .item.active .inner:after {
+  width: 20%;
+  height: 20%;
+  opacity: 1;
+}
+.round .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.91rem;
+  height: 0.91rem;
+  border-radius: 50%;
+  box-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.round .inner:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.02;
+  transition: all 0.3s;
+}
+.round img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.hero-info {
+  font-family: "Rowdies";
+  width: 4rem;
+  padding: 0.2rem;
+  flex-shrink: 0;
+  position: relative;
+  padding-left: 4%;
+  padding-right: 4%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.15rem;
+  backdrop-filter: blur(4px);
+  background-color: #1F184A80;
+  box-shadow: 0 0 2rem rgba(255, 255, 244, 0.7);
+  text-shadow: 0 0 2px #555;
+}
+@media (max-width: 992px) {
+  .hero-info {
+    width: 100%;
+  }
+}
+.hero-info .row {
+  margin-bottom: 0.1rem;
+  animation: fadeInFromTop 0.5s both;
+}
+.hero-info .row:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.hero-info .row:nth-of-type(2) {
+  animation-delay: 0.25s;
+}
+.hero-info .row:nth-of-type(3) {
+  animation-delay: 0.5s;
+}
+.hero-info .row:nth-of-type(4) {
+  animation-delay: 0.75s;
+}
+.hero-info .title {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff00a;
+}
+.hero-info .title:before {
+  content: "";
+}
+.hero-info .content {
+  font-size: 2em;
+  line-height: 1.8;
+  color: #fff;
+}
+.hero-info .content.desc {
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+
+span {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border: 0px solid #fff 0;
+  border-width: 0.03rem 0.03rem 0 0;
+}
+span:nth-of-type(1) {
+  top: 0;
+  right: 0;
+}
+span:nth-of-type(2) {
+  bottom: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
+span:nth-of-type(3) {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+span:nth-of-type(4) {
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+@keyframes roundItemFadeIn {
+  from {
+    opacity: 0;
+    transform: none;
+  }
+}
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-0.2rem);
+  }
+}
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(0.5rem);
+  }
+}
+@keyframes blurFadeIn {
+  from {
+    filter: blur(10px);
+    letter-spacing: -0.4rem;
+  }
+}
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+p, a, ul li {
+  font-family: "Rowdies";
+  font-size: 14px;
+}
+
+.slider {
+  margin: 80px 0;
+  height: 300px;
+  display: block;
+  perspective: 1000px;
+  position: relative;
+  width: 90vw;
+}
+
+.slide {
+  cursor: pointer;
+  left: 0px;
+  display: inline-block;
+  width: 280px;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: 0.4s all;
+  border-radius: 20px;
+  box-shadow: 0 0 1rem #462F9045;
+  color: white;
+  backdrop-filter: blur(9px);
+  border: solid 2px transparent;
+  border-radius: 14px;
+  background-image: linear-gradient(#0200546b, #0000006b), linear-gradient(-12deg, #6900FF73, #FF870075);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.slide-container {
+  padding: 20px 30px;
+}
+
+.slide-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slide-container ul li {
+  padding: 0;
+}
+
+.slide.active {
+  z-index: 4;
+}
+
+.image-wrapper {
+  height: auto;
+  width: auto;
+  border-radius: 4px;
+  box-shadow: 0px 2px 0.4rem #00000095;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+.shine::before {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  transform: skewX(-25deg);
+  width: 50%;
+}
+.shine:hover::before, .shine:focus::before {
+  animation: shine 0.85s;
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
