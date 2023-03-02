@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>EVIUM - Jump into the Future MMORPG</title>
+    <meta name="twitter:title" content="EVIUM - Jump into a New World">
+    <meta property="og:description" content="Evium is the next generation Web3 MMORPG on Ethereum and Polygon.">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EVIUM - Jump into a New World">
+    <meta name="twitter:description" content="Evium is the next generation Web3 MMORPG on Ethereum and Polygon.">
+    <meta property="og:image" content="assets/img/eve.png">
+    <meta name="description" content="Evium is the next generation NFT game and MMORPG brought to you in Web3 on Ethereum and Polygon.">
+    <meta name="twitter:image" content="assets/img/eve.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/favicon180.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon512.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rowdies:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/main.compiled.css">
+    <link rel="stylesheet" href="assets/css/styles.compiled.css">
+</head>
+
+<body style="background: rgb(10,9,16);">
+    <section data-aos="fade" data-aos-duration="1550" style="width: 100%;min-width: 100%;max-width: 100%;"><div id="app" style="height:100vh">
+  <div class="hero-bg" :style="{ backgroundImage: `url(${activeInfo.img})` }" :key="activeIndex"></div>
+  <div class="hero-title" :key="activeIndex">{{ activeInfo.name }}</div>
+
+  <div class="round">
+    <div class="item" :class="{ active: activeIndex === key }" @click="activeIndex = key" v-for="(el, key) in list" :key="key" :style="{ transform: itemPosition[key] }">
+      <div class="inner">
+        <img :src="el.thumbImg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-info" v-if="activeInfo" :key="activeIndex">
+    <div class="row">
+      <div class="title"></div>
+      <div class="content">{{ activeInfo.name }}</div>
+    </div>
+    <div class="row">
+      <div class="title"></div>
+      <div style="line-spacing: 16px;" class="content desc">{{ activeInfo.desc }}</div>
+    </div>
+  </div>
+
+</div></section>
+    <div><div class="app-container chat">
+    <div class="sidebar-wrapper">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-header">
+                    <div class="evium-logo" onClick="toggleSidebar()">
+                  <div class="d-flex justify-content-center align-items-center">      <div>EVE</div>
+<div class="energy-image">
+                            <img src="assets/img/E_E.png" style="border-radius: 50%; margin-left: 5px; margin-right:5px; width:25px; height:100%"/>
+                        </div>
+<div>HUD</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-header">
+                        <div>EVIUM PASSPORT NFTs</div>
+                        <a class="view-all" href="mint.html">MINT 0.02 ETH</a>
+                    </div>
+                    <a class="channel-link" href="alpha.html">
+                        <div class="card-image">
+                            <img src="assets/img/Donzovelium_1.gif" />
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/alphasymbol.png" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name" href="alpha.html">Alpha</div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/eth.png" />
+                        </div>
+                    </a>
+                    <a class="channel-link" href="beta.html">
+                        <div class="card-image">
+                            <img src="assets/img/Terazarious_1.gif" />
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/betasymbol.png" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Beta</div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/eth.png" />
+                        </div>
+                    </a>
+                    <a class="channel-link" href="gamma.html">
+                        <div class="card-image">
+                            <img src="assets/img/Drazozelium_1.gif" />
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/gammasymbol.png" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Gamma</div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/eth.png" />
+                        </div>
+                    </a>
+                    <a class="channel-link" href="delta.html">
+                        <div class="card-image">
+                            <img src="assets/img/Soltheos_1.gif" />
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/deltasymbol.png" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Delta</div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/eth.png" />
+                        </div>
+                    </a>
+                    <a class="channel-link" href="phi.html">
+                        <div class="card-image">
+                            <img src="assets/img/Snaphilides_1.gif" />
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/phisymbol.png" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Phi</div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/eth.png" />
+                        </div>
+                    </a>
+                    <a class="channel-link" href="psi.html">
+                        <div class="card-image">
+                            <img src="assets/img/Maggsmillites_1.gif" />
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/psisymbol.png" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Psi</div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/eth.png" />
+                        </div>
+                    </a>
+                    <a class="channel-link" href="omega.html">
+                        <div class="card-image">
+                            <img src="assets/img/Mishereum_JP.gif" />
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/omegasymbol.png" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Omega</div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/eth.png" />
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-header">
+                        <div>EVIUM LAND NFTs</div>
+                        <a class="view-all" href="mint.html">MINT 1 ETH</a>
+                    </div>
+                    <a class="channel-link" href="mint.html">
+                        <div class="card-image">
+                            <img src="assets/img/landplot.gif" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name" href="mint.html">Evium Land</div>
+                            <div class="channel-status">
+                                <div>10,000 Supply</div>
+                            </div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/eth.png" />
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-header">
+                        <div>EVE RESOURCES NFTs</div>
+                        <a class="view-all" href="mint.html">MINT FOR FREE</a>
+                    </div>
+                    <a class="channel-link" href="mint.html">
+                        <div class="resources-image">
+                            <img src="assets/img/resources.gif" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name" href="mint.html">Evium Resources</div>
+                            <div class="channel-status">
+                                <div>9,999 Supply</div>
+                            </div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/matic.png" />
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-header">
+                        <div>Kudos Coins NFTs</div>
+                        <a class="view-all" href="mint.html">MINT 0.25 MATIC</a>
+                    </div>
+                    <a class="channel-link" href="mint.html">
+                        <div class="resources-image">
+                            <img src="assets/img/Kudos.png" />
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name" href="mint.html">Kudos Coins</div>
+                            <div class="channel-status">
+                                <div>1,000,000 Supply</div>
+                            </div>
+                        </div>
+                        <div class="energy-image">
+                            <img src="assets/img/matic.png" />
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebar-group">
+                    <div class="sidebar-group-header">
+                        <div>- Utils -</div>
+                    </div>
+                    <a class="channel-link">
+                        <div class="utils-image">
+                            <img src="assets/img/ethereum.png" />
+                        </div>
+                        <div class="utils-image">
+                            <img src="assets/img/ens.png" />
+                        </div>
+                        <div class="utils-image">
+                            <img src="assets/img/polygon.png" />
+                        </div>
+                        <div class="utils-image">
+                            <img src="assets/img/unreal.png" />
+                        </div>
+                        <div class="utils-image">
+                            <img src="assets/img/fjord.png" />
+                        </div>
+                        <div class="utils-image">
+                            <img src="assets/img/mew.png" />
+                        </div>
+                        <div class="utils-image">
+                            <img src="assets/img/rarible.png" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="page-overlay" onClick="toggleSidebar()"></div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+
+            <div class="nav">
+                <div class="container"><button data-bs-toggle="collapse" data-bs-target="#navcol-1" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+        </div>
+    </div>
+                <div class="tools">
+                <div class="logo-wrapper">
+                <div id="sndFXtrig" class="profile-image-wrapper dropdown" onClick="toggleSidebar()" data-tooltip="OPEN" data-tooltip-pos="down">
+                    <div id="makeNoise" class="profile-image dropdown-toggle" style="padding-top: 0px; margin-top: 2px; margin-right: 24px">
+                        <img src="assets/img/E_E.png"/>
+                    </div>
+                </div>
+                <div class="evium-logo">
+                    <div style="color:#fff; font-size: 18px; text-shadow: 1px 1px 12px rgba(0,0,0,0.5);">EVIUM</div>
+                </div>
+            </div>
+                    
+                <div>
+                <div id="sndFXtrig1" class="profile-image-wrapper dropdown"  data-tooltip="Tools/Links" data-tooltip-pos="down">
+                    <div id="makeNoise1" class="profile-image dropdown-toggle" style="margin-top: 5px">
+                        <img src="assets/img/evetools.png"/>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class="dropdown-header">
+                            <div class="username">Tools &amp; Links</div>
+                        </div>
+                        <div class="dropdown-group">
+                        <a class="dropdown-link">
+                                <i class="material-icons">home</i>
+                                <h7>Home</h7>
+                            </a>
+                        <a class="dropdown-link" href="mint.html">
+                                <i class="material-icons">bolt</i>
+                                <h7>Mint ⭐️</h7>
+                            </a>
+                            <a class="dropdown-link" href="about.html" >
+                                <i class="material-icons">description</i>
+                                <h7>About</h7>
+                            </a>
+                            <a class="dropdown-link" href="roadmap.html" >
+                                <i class="material-icons">map</i>
+                                <h7>Road map</h7>
+                            </a>
+                        </div>
+                        <div class="dropdown-group">
+                            <a class="dropdown-link" onClick="toggleEviumMode()">
+                                <i class="material-icons" id="eviumMode">check_box_outline_blank</i>
+                                <h7>Evium Mode</h7>
+                            </a>
+                            <a class="dropdown-link" onClick="toggleDarkMode()">
+                                <i class="material-icons" id="darkMode">check_box_outline_blank</i>
+                                <h7>Dark Mode</h7>
+                            </a>
+                            <a class="dropdown-link" id="nyan-btn" onClick="toggleMusicMode()">
+                                <i class="material-icons" id="musicMode">check_box_outline_blank</i>
+                                <h7>Music On/Off<audio id="nyan" src="https://github.com/EVIUM/audio/raw/main/audio.mp3" preload="metadata" type="audio/mpeg"></audio></h7>
+                            </a>
+                        </div>
+                            <div class="dropdown-group">
+                            <a class="dropdown-link" href="https://twitter.com/eviumlabs" target="_blank">
+                                <i class="material-icons">face</i>
+                                <h7>Twitter</h7>
+                            </a>
+                            <a class="dropdown-link" href="https://discord.gg/bd4d5NhK7u" target="_blank">
+                                <i class="material-icons">groups</i>
+                                <h7>Discord</h7>
+                            </a>
+                        </div>
+                        <div class="dropdown-group">
+                            <a class="dropdown-link" href="#" data-tooltip="Coming Soon" data-tooltip-pos="center">
+                                <i class="material-icons">play_circle</i>
+                                <h7>Mini Game</h7>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+                
+                <div style="margin-left: 15px">
+                <div class="profile-image-wrapper dropdown"  data-tooltip="$EVE" data-tooltip-pos="down">
+                    <div class="profile-image dropdown-toggle" style="padding: 0px; margin-top: 5px">
+                        <img src="assets/img/evecoin.png"/>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class="dropdown-header">
+                            <div class="username">EVE COIN</div>
+                        </div>
+                        <div class="dropdown-group">
+                            <a class="dropdown-link " href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x8F18642C9E7f6EBceDb4C7e7E1E5fe492Dd42546" target="_blank" data-tooltip="No liquidity" data-tooltip-pos="center">
+                                <i class="material-icons">token</i>
+                                <h7>Get EVE coin</h7>
+                            </a>
+                        </div>
+                        <div class="dropdown-group">
+                            <a class="dropdown-link" href="https://app.uniswap.org/#/tokens/ethereum/0x8F18642C9E7f6EBceDb4C7e7E1E5fe492Dd42546" target="_blank" data-tooltip="No liquidity" data-tooltip-pos="center">
+                                <i class="material-icons">insights</i>
+                                <h7>Analytics</h7>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+                
+                <div style="margin-left: 15px">
+                <div class="profile-image-wrapper dropdown"  data-tooltip="Kudos" data-tooltip-pos="down">
+                    <div class="profile-image dropdown-toggle" style="padding: 0px; margin-top: 5px">
+                        <img src="assets/img/Kudos.png"/>
+                    </div>
+                    <div class="dropdown-content">
+                        <div class="dropdown-header">
+                            <div class="username">Kudos Coins</div>
+                        </div>
+                        <div class="dropdown-group">
+                            <a class="dropdown-link" href="mint.html">
+                                <i class="material-icons">bolt</i>
+                                <h7>Mint Kudos 🪙</h7>
+                            </a>
+                            <a class="dropdown-link" href="#" data-tooltip="Coming Soon" data-tooltip-pos="right-center">
+                                <i class="material-icons">payments</i>
+                                <h7>Tip</h7>
+                            </a>
+                        </div>
+                        <div class="dropdown-group">
+                            <a class="dropdown-link" href="#" data-tooltip="Coming Soon" data-tooltip-pos="right-center">
+                                <i class="material-icons">shop</i>
+                                <h7>My inventory</h7>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+
+        </div>
+        
+</div></div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://unpkg.com/vue@3.2.22/dist/vue.global.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
