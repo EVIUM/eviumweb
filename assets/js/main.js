@@ -149,9 +149,9 @@ const App = {
           desc:
             "GAMMA Energy is the atomic, fiery energy of EVIUM. Creatures formed from gamma energy can be temperamental and have powerful combative attributes. Gamma energy was supplied by the binary stars when they emitted powerful gamma ray bursts towards EVIUM. Gamma EVIUM are vibrant and radiate a fiery glow to warn other EVIUM of impending danger. Gamma EVIUM can be tamed, but still provide the greatest protection against external threats. Explore Gamma in the left HUD menu.",
           img:
-            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/beta_g.png",
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/gamma_g.png",
           thumbImg:
-            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/beta_g.png"
+            "https://raw.githubusercontent.com/EVIUM/eviumweb/main/assets/img/gamma_g.png"
         },
         {
           name: "Delta",
